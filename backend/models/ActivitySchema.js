@@ -5,7 +5,7 @@ const ActivitySchema = new mongoose.Schema({
   type: { type: String, required: true },
   status: { type: String, required: true },
   dueDate: { type: Date, required: true },
-  class: { type: mongoose.Schema.Types.ObjectId, ref: "Class", required: true },
+  classID: { type: mongoose.Schema.Types.ObjectId, ref: "Class", required: true },
 });
 
 module.exports = mongoose.model("Activity", ActivitySchema);
