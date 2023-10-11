@@ -2,10 +2,10 @@
 
 import mongoose from "mongoose";
 
-const NoteSchema = mongoose.Schema({
+const NoteSchema = new mongoose.Schema({
   title: { type: String, required: true, unique: true },
   content: { type: String, required: true },
   class: { type: mongoose.Schema.Types.ObjectId, ref: "Class", required: true },
 });
 
-export const Note = mongoose.model("Note", NoteSchema);
+module.exports = mongoose.model("Note", NoteSchema);
