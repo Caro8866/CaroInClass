@@ -14,4 +14,4 @@ const ClassSchema = mongoose.Schema({
   // students: { type: Array, required: true }, // not relevant right now
 });
 
-const Class = mongoose.model("Class", ClassSchema);
+export const Class = mongoose.model("Class", ClassSchema);

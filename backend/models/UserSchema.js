@@ -1,4 +1,3 @@
-// User Schema
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
@@ -18,4 +17,4 @@ UserSchema.pre("save", async (next) => {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-const User = mongoose.model("User", UserSchema);
+export const User = mongoose.model("User", UserSchema);
